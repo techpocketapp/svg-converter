@@ -10,6 +10,7 @@
 
 @class SVGConverter;
 
+
 @protocol SVGConverterDelegate <NSObject>
 
 @required
@@ -24,15 +25,18 @@
 
 @end
 
-
 @interface SVGConverter : NSObject
 
-- (id)initWithLayer:(id)aWindow;
-+ (id)SVGConverterWithLayer:(id)aWindow;
+- (id)initWithWindow:(id)aWindow;
++ (id)SVGConverterWithWindow:(id)aWindow;
+
+- (void)setStoragePath:(NSString *)aStoragePath;
 
 - (void)startProcessingWithSVGFiles:(NSArray *)aSVGFiles;
 - (void)stopProcessing;
+- (BOOL)isProcessing;
 
-- (void)setStoragePath:(NSString *)aStoragePath;
+@property (nonatomic, assign) id <SVGConverterDelegate> delegate;
+@property (nonatomic, copy) NSString *storagePath;
 
 @end
