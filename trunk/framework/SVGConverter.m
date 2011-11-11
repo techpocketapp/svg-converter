@@ -12,6 +12,7 @@
 @interface SVGConverter()
 
 @property (nonatomic, assign) BOOL isProcessing;
+@property (nonatomic, retain) NSMutableArray *SVGs;
 
 @end
 
@@ -20,6 +21,7 @@
 @synthesize delegate;
 @synthesize storagePath;
 @synthesize isProcessing;
+@synthesize SVGs;
 
 - (id)initWithWindow:(id)aWindow {
 
@@ -35,6 +37,7 @@
 
     self.delegate = nil;
     self.storagePath = nil;
+    self.SVGs = nil;
     [super dealloc];
 }
 
