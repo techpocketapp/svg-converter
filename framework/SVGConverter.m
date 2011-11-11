@@ -11,15 +11,19 @@
 
 @interface SVGConverter()
 
+@property (nonatomic, assign) BOOL isProcessing;
+
 @end
 
 @implementation SVGConverter
 
 @synthesize delegate;
 @synthesize storagePath;
+@synthesize isProcessing;
 
 - (id)initWithWindow:(id)aWindow {
 
+    return nil;
 }
 
 + (id)SVGConverterWithWindow:(id)aWindow {
@@ -29,6 +33,7 @@
 
 - (void)dealloc {
 
+    self.delegate = nil;
     self.storagePath = nil;
     [super dealloc];
 }
@@ -43,6 +48,7 @@
 
 - (BOOL)isProcessing {
 
+    return isProcessing;
 }
 
 @end

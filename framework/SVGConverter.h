@@ -9,19 +9,19 @@
 #import <Foundation/Foundation.h>
 
 @class SVGConverter;
-
+@class SVG;
 
 @protocol SVGConverterDelegate <NSObject>
 
 @required
 
-- (void)SVGConverter:(SVGConverter *)aSVGConverter didStartProcessing:(NSArray *)aSVGFiles;
-- (void)SVGConverter:(SVGConverter *)aSVGConverter didFinishProcessing:(NSArray *)aPNGFiles;
+- (void)SVGConverter:(SVGConverter *)aSVGConverter didStartProcessing:(NSArray *)aSVGs;
+- (void)SVGConverter:(SVGConverter *)aSVGConverter didFinishProcessing:(NSArray *)aPNGs;
 
 @optional
 
-- (void)SVGConverter:(SVGConverter *)aSVGConverter didFailWithError:(NSError *)error;
-- (void)SVGConverter:(SVGConverter *)aSVGConverter didProcessSVGFile:(NSString *)aSVGFile;
+- (void)SVGConverter:(SVGConverter *)aSVGConverter didFailWithError:(NSError *)anError;
+- (void)SVGConverter:(SVGConverter *)aSVGConverter didProcessSVG:(SVG *)aSVG;
 
 @end
 
@@ -30,9 +30,7 @@
 - (id)initWithWindow:(id)aWindow;
 + (id)SVGConverterWithWindow:(id)aWindow;
 
-- (void)setStoragePath:(NSString *)aStoragePath;
-
-- (void)startProcessingWithSVGFiles:(NSArray *)aSVGFiles;
+- (void)startProcessingWithSVGFiles:(NSArray *)aSVGs;
 - (void)stopProcessing;
 - (BOOL)isProcessing;
 

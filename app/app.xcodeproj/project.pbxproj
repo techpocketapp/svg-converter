@@ -18,6 +18,7 @@
 		12EEFF37146D72C100040217 /* SVGViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12EEFF35146D72C100040217 /* SVGViewController_iPad.xib */; };
 		12EEFF46146D72E700040217 /* circle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 12EEFF42146D72E700040217 /* circle.svg */; };
 		12EEFF47146D72E700040217 /* SVGConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EEFF45146D72E700040217 /* SVGConverter.m */; };
+		12EEFF7B146D7DA900040217 /* SVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EEFF7A146D7DA900040217 /* SVG.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		12EEFF42146D72E700040217 /* circle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = circle.svg; sourceTree = "<group>"; };
 		12EEFF44146D72E700040217 /* SVGConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGConverter.h; sourceTree = "<group>"; };
 		12EEFF45146D72E700040217 /* SVGConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVGConverter.m; sourceTree = "<group>"; };
+		12EEFF79146D7DA900040217 /* SVG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVG.h; sourceTree = "<group>"; };
+		12EEFF7A146D7DA900040217 /* SVG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVG.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 			children = (
 				12EEFF44146D72E700040217 /* SVGConverter.h */,
 				12EEFF45146D72E700040217 /* SVGConverter.m */,
+				12EEFF79146D7DA900040217 /* SVG.h */,
+				12EEFF7A146D7DA900040217 /* SVG.m */,
 			);
 			name = framework;
 			path = ../framework;
@@ -195,6 +200,7 @@
 				12EEFF2E146D72C100040217 /* SVGAppDelegate.m in Sources */,
 				12EEFF31146D72C100040217 /* SVGViewController.m in Sources */,
 				12EEFF47146D72E700040217 /* SVGConverter.m in Sources */,
+				12EEFF7B146D7DA900040217 /* SVG.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
